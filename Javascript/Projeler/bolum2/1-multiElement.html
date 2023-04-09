@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="card-header">
+      <h3 id="title" class="card-title h1 h2">To Do App</h3>
+    </div>
+    <ul id="task-list">
+      <li class="task">Gorev 1</li>
+      <li class="task">Gorev 2</li>
+      <li class="task">Gorev 3</li>
+    </ul>
+    <ul id="task-list2">
+      <li class="task">Gorev 1</li>
+      <li class="task">Gorev 2</li>
+      <li class="task">Gorev 3</li>
+    </ul>
+    <script>
+      let taskList
+      taskList = document.getElementsByClassName('task')
+      // ul = document.getElementById('task-list')
+      // taskList = ul.getElementsByTagName('li')
+      // // taskList = document.getElementsByTagName('li')
+      taskList = document.querySelectorAll('#task-list2 li')
+
+      for (let i = 0; i < taskList.length; i++) {
+        taskList[i].style.color = 'red'
+        taskList[i].style.fontSize = '30px'
+      }
+    </script>
+  </body>
+</html>

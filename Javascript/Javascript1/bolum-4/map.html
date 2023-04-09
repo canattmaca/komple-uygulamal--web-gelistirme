@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- maps ile hem obj olusturabilirim hem de onu set edebilirim. -->
+    <script>
+      const ogrenciler = new Map();
+      ogrenciler.set(1, "aliyilmaz");
+      ogrenciler.set("123435232312314", "efecan");
+      ogrenciler.set(true, "alican");
+      console.log(ogrenciler.get("123435232312314"));
+
+      // sonuc = ogrenciler.size;
+      // sonuc = ogrenciler.has(1);
+      // ogrenciler.delete(1);
+      // sonuc = ogrenciler.size;
+      // ogrenciler.clear()
+      for (let x of ogrenciler.keys()) {
+        console.log(x);
+      }
+      for (let x of ogrenciler.values()) {
+        console.log(x);
+      }
+      for (let x of ogrenciler.entries()) {
+        console.log(x);
+      }
+       for (let [key,value] of ogrenciler.entries()) {
+        console.log(key,value);
+      }
+    </script>
+  </body>
+</html>

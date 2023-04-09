@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FLOAT ÖĞRENİYORUZ</title>
+  </head>
+  <style>
+    .conteiner{
+        background-color: blue;
+    }
+    .box {
+      background-color: brown;
+      width: 150px;
+      height: 150px;
+      float: right;
+    }
+
+
+    #clearfix::after{content: "";
+    display: block;
+    clear: both;}
+
+  </style>
+  <body >
+    <div class="conteiner" id="clearfix">
+      <div class="box" id="box1">kutu1</div>
+      <div class="box">kutu2</div>
+      <div class="box">kutu3</div>
+     
+    </div>
+    <div><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit, esse similique dignissimos debitis sapiente architecto obcaecati dolorum laborum tempora aliquid optio fuga aperiam voluptatibus consequuntur ut maxime magnam veniam perspiciatis!</p></div>
+  </body>
+</html>

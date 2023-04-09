@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css
+    "
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+  .dropdown-toggle::after{
+    display: none;
+  }
+  .task{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+</style>
+  </head>
+  <body>
+    <div class="container">
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                To Do App
+            </div>
+            <div class="card-body">
+                <form >
+                        <div class="input-group">
+                        <input type="text" id="txtTaskName" class="form-control">
+                        <button class="btn btn-primary" id="btnAddNewTask" type="submit">Ekle</button> 
+                        </div>
+                    
+                </form>
+            </div>
+        </div>
+        <div class="card mt-3">
+            <div class="card-header">
+                <button class="btn btn-danger btn-sm float-end" id="btnClear">Temizle</button>
+            </div>
+            <ul id="task-list" class="list-group list-group-flush">
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js
+"></script>
+<script>
+ 
+  'use strict'
+ 
+
+  let taskList=[
+    {'id':1,'taskName':'Task 1'},
+    {'id':2,'taskName':'Task 2'},
+    {'id':3,'taskName':'Task 3'},
+    {'id':4,'taskName':'Task 4'}
+  ]
+  
+  displayTasks()
+  
+  function displayTasks(){
+    let ul=document.getElementById('task-list')
+    ul.innerHTML=''
+    //display taskı çapırdığımız zaman 0 dan yazdırır yani hepsini birden eklemez.İlk çağırdığında 4 e kadar gitti ama bir dahakinde düşündüğümüz zaman görev listesini bir daha almaması için ul.innerhtml sıfırlarız. Böylece geriye sadece yazdığımız görev kalır
+        for(let index of taskList){
+          let li= `
+                <li class="task list-group-item">
+                                <div class="form-check">
+                                  <input type="checkbox" id="${index.id}" class="form-check-input">
+                                  <label for="${index.id}" class="form-check-label">${index.taskName}</label>
+                                </div>
+                                <div class="dropdown">
+                                  <button class="btn btn-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                  </button>
+                                  <ul class="dropdown-menu">
+                                    <li><a onclick='deleteTask(${index.id})' class="dropdown-item" href="#"><i class="fa-solid fa-trash"></i> Delete</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-pen-to-square"></i> Edit</a></li>
+                              
+                                  </ul>
+                                </div>
+                </li> 
+                `
+            ul.insertAdjacentHTML('beforeEnd',li)
+ }
+  }
+  
+let btnAdd=document.querySelector('#btnAddNewTask')
+// btnAdd.addEventListener('click',function(e){
+//     e.preventDefault()
+//     console.log('click');
+// })
+btnAdd.addEventListener('click',newTask)
+btnAdd.addEventListener('keypress',function(){
+  if(event.key=='Enter'){
+    document.getElementById('#btnAddNewTask').click()
+  }
+})
+
+function newTask(e){
+   let taskInput=document.querySelector('#txtTaskName')
+   if(taskInput.value==''){
+    alert('write a TaskName')
+   }
+   else{ 
+   taskList.push({'id':taskList.length+1,'taskName':taskInput.value})
+   taskInput.value=''
+   displayTasks()  
+  }
+   e.preventDefault()
+} 
+let btnClear=document.querySelector('#btnClear')
+btnClear.addEventListener('click',function(){
+  taskList=''
+  displayTasks()
+})
+ 
+function deleteTask(id){
+  let deletedId
+  // for(let task of taskList){
+  //   if(task.id===id)
+  //   {deletedId===id}
+  // }
+  //  deletedId= taskList.findIndex(function(task){
+  //     return task.id==id
+  //   })
+  deletedId=taskList.findIndex(task=>task.id==id)
+  taskList.splice(deletedId,1)
+  displayTasks()
+}
+
+</script>
+   
+  </body>
+</html>

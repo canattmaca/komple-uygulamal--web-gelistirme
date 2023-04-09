@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>backgroundimages12 ÖĞRENECEĞİZ</title>
+  </head>
+  <style>
+    * {
+      margin: 0px;
+    }
+    #sectionh1 {
+      height: 300px;
+      background-color: brown;
+      padding: 30px 20px;
+      color: #fff;
+      font-size: 32px;
+      text-align: center;
+    }
+    #sectionh2 {
+      height: 100px;
+      background-color: blueviolet;
+      color: aqua;
+      padding: 20px 30px;
+      font-size: 24px;
+      text-align: center;
+    }
+    .nav-link {
+      display: inline-block;
+      width: calc(100% - 85px);
+      text-align: right;
+    }
+    .main-header {
+      background-color: blue;
+      padding: 8px;
+    }
+    .nav-link-items {
+      list-style-type: none;
+      padding-right: 8px;
+    }
+    .nav-link-item {
+      display: inline-block;
+    }
+    .main-header-1 {
+      font-size: large;
+      color: #fff;
+      text-decoration-line: none;
+
+    }
+    .nav-link-item a{
+      color: #fff;
+      text-decoration-line: none;
+      font-size: 16px;
+    }
+    .nav-link-item::before{content: "\259A";}
+
+    .nav-link-item a:link{
+      background-color: blue;
+       color: rgb(210, 227, 222);
+      }
+    .nav-link-item a:hover{background-color: darksalmon;
+    color: rgb(37, 0, 0);}
+    .nav-link-item a:active{background-color: #fff;
+    color: blue;}
+    .nav-link-item__login a{background-color: #fff;
+                            color: gray;
+                            padding: 5px 10px;
+                            border: 3px solid white;
+                            border-radius: 6px;
+                            font-weight: bold;
+                            margin-left: 10px;
+                            }
+    .nav-link-item__login a:hover{background-color: gray;
+                                color: white;}
+    .nav-link-item__login::before{content: none;}
+
+
+  </style>
+
+  <body>
+    <header class="main-header">
+      <a class="main-header-1" href="">MovieApp</a>
+      <nav class="nav-link">
+        <ul class="nav-link-items">
+          <li class="nav-link-item">
+            <a href="">Filmler</a>
+          </li>
+          <li class="nav-link-item">
+            <a href="">Diziler</a>
+          </li>
+          <li class="nav-link-item nav-link-item__login">
+            <a href="">Login</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="sectionh1">
+        <h1>Welcome to MovieApp</h1>
+      </section>
+      <section id="sectionh2">
+        <h1>How it work?</h1>
+      </section>
+    </main>
+  </body>
+</html>

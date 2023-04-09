@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>a8-image-galery</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Gemstones&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      
+      h1 {
+        text-transform: uppercase;
+        text-align: center;
+        font-family: 'Rubik Gemstones', cursive;
+        font-size: 5rem;
+      }
+      .galery {
+        display: flex;
+
+        flex-wrap: wrap;
+      }
+      .galery div {
+        flex-grow: 1;
+        margin: 3px;
+        overflow: hidden;
+      }
+      img {
+        width: 100%;
+        transition: transform 0.5s ease-in-out;
+        height: 100%;
+        object-fit: cover;
+        
+      }
+      /* scale 1.2 yüzde 20 büyütür  ama taşmayı kapatmak için overflow hidden
+      çerçeve zemin için backroundsize- burda da objectfit*/
+      img:hover {
+        transform: scale(1.2);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>image galery</h1>
+    <div class="galery">
+      <div><img src="https://picsum.photos/300/450?random=1" /></div>
+      <div><img src="https://picsum.photos/500/600?random=2" /></div>
+      <div><img src="https://picsum.photos/300/300?random=3" /></div>
+      <div><img src="https://picsum.photos/500/300?random=4" /></div>
+      <div><img src="https://picsum.photos/300/300?random=5" /></div>
+      <div><img src="https://picsum.photos/600/300?random=6" /></div>
+      <div><img src="https://picsum.photos/300/700?random=7" /></div>
+      <div><img src="https://picsum.photos/500/300?random=8" /></div>
+      <div><img src="https://picsum.photos/200/300?random=9" /></div>
+    </div>
+  </body>
+</html>

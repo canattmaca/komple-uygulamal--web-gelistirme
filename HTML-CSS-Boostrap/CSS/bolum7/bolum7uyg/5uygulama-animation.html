@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    html {
+  scroll-behavior: smooth;
+}
+    body {
+      margin: 0;
+      padding: 0;
+      color: white;
+    }
+    #page-1 {
+      background-color: #472183;
+    }
+    #page-2 {
+      background-color: #cb1c8d;
+    }
+    #page-3 {
+      background-color: #009eff;
+    }
+    .page {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .page h1 {
+      font-size: 5rem;
+      margin: 2rem;
+    }
+    .page p {
+      font-size: 2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background-color: #f4f4f4;
+      color: #333;
+      text-decoration: none;
+      border: none;
+      font-size: 1.5rem;
+      transition: all 0.3s ease-in;
+    }
+    .btn:hover {
+      background-color: #333;
+      color: #f4f4f4;
+    }
+    #page-1 h1 {
+      transform: translateY(-800px);
+      animation: p1_h1 1s forwards;
+    }
+    @keyframes p1_h1 {
+        to{
+            transform: translateY(0);
+        }
+    }
+    #page-1 p {
+      transform: translateX(-2000px);
+      animation: p1_p 1s forwards;
+      animation-delay: 1s ;
+    }
+    @keyframes p1_p {
+        to{
+            transform: translateX(0);
+        }
+    }
+  </style>
+  <body>
+    <section id="page-1" class="page">
+      <h1>Page 1</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nostrum,
+        perspiciatis est delectus voluptas sapiente?
+      </p>
+      <div>
+        <a href="#page-2" class="btn">Next Page</a>
+      </div>
+    </section>
+    <section id="page-2" class="page">
+      <h1>Page 2</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nostrum,
+        perspiciatis est delectus voluptas sapiente?
+      </p>
+      <div>
+        <a href="#page-1" class="btn">Previous Page</a>
+        <a href="#page-3" class="btn">Next Page</a>
+      </div>
+    </section>
+    <section id="page-3" class="page">
+      <h1>Page 3</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nostrum,
+        perspiciatis est delectus voluptas sapiente?
+      </p>
+      <div>
+        <a href="#page-1" class="btn">Previous Page</a>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>a6-flex-margin</title>
+    <style>
+      .container {
+        display: flex;
+        background-color: orangered;
+        padding: 10px;
+        height: 300px;
+        align-content: center;
+        flex-wrap: wrap;
+        /*
+        bu başlık altında elemanların  margin özelliği ile konum verebiliyorzü
+
+        margin auto dediğimiz anda 4 köşeden
+        top dediğimiz anda yukardan
+        left dediğimiz anda solda en uca auto olarak götürüyor flex özelliği
+
+                */
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+      }
+      .item {
+        background-color: rgb(85, 85, 170);
+        color: white;
+        padding: 25px;
+        font-size: 25px;
+        margin: 10px;
+      }
+
+      /* .item1 {
+        flex: 25%;
+        order: 1;
+      } 
+      .item2 {
+        flex: 25%;
+      }
+      .item3 {
+     order: -1
+     ;
+        flex: 50%;
+      }  */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item1">item1</div>
+      <div class="item item2">item2</div>
+      <div class="item item3">item3</div>
+      <div class="item item3">item4</div>
+      <div class="item item3">item5</div>
+      <div class="item item3">item6</div>
+      <div class="item item3">item7</div>
+      <div class="item item3">item8</div>
+      <!-- <div class="item item4">item4</div>
+      <div class="item item5">item5</div> -->
+    </div>
+  </body>
+</html>

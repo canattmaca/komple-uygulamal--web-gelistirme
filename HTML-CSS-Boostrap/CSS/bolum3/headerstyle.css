@@ -1,0 +1,40 @@
+.main-head-nav {
+    display: inline-block;
+  }
+  .main-head-nav-item {
+    display: inline-block;
+    padding-right: 10px;
+  }
+  .main-head-nav-items {
+    text-align: right;
+  }
+  .yatay {
+    width: calc(100% - 125px);
+  }
+  .main-head {
+    background-color: #fc997c;
+    color: white;
+    padding: 10px;
+    z-index: 1;
+    position: fixed;
+    width: fixed;
+    width: 100%;
+  }
+  .main-head-nav-item a {
+    text-decoration: 0;
+    color: white;
+  }
+  .main-head-nav-item a::before {
+    content: "\2605";
+  }
+  .main-head-nav-item__item3 a::before {
+    content: "";
+  }
+
+  .main-head-nav-item__item3 a:hover {
+    color: grey;
+    background-color: white;
+    border: 3px solid grey;
+  }
+  .main-head-nav-item a:hover{color: grey;}
+  .ana-govde{padding-top: 20px;}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boxmodel</title>
+    <style>
+      #showcase {
+        background-color: brown;
+        /* margin: 20px 25px 15px 55px;} */
+        margin: 50px auto;
+        width: 500px;
+        padding: 50px;
+      }
+      #how-it-work {
+        background-color: aqua;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-left: 15px;
+        margin-right: 60px;
+      }
+      h1 {
+        padding-top: 20px;
+        background-color: blanchedalmond;
+      }
+      * {
+        margin: 0;
+      }
+      #link-mesafe {
+        padding-right: 32px;
+        margin-top: auto
+        ;
+      }
+      a {
+        padding-right: 25px;
+        background-color: #810ca8;
+        color: #fff
+      }
+    </style>
+  </head>
+  <body>
+    <header id="link-mesafe">
+      <nav style="font-size: 32px">
+        <a href="">Home</a>
+
+        <a href="">Movie</a>
+
+        <a href="">Content</a>
+      </nav>
+      <hr />
+    </header>
+    <!-- box model  CTRL + K +C
+        margin : ner bir modelin varsayılan olarak alttan-üstten-sağdan-soldan boşluk veriyor. Yukardan vermesi sebebi h1 marginidir.
+        üst-sağ-alt-sol şeklinde araya boşluk bırakılarak yazılabilir.
+
+        padding:
+        border
+      -->
+    <main>
+      <section id="showcase"><h1>Welcome To MovieApp</h1></section>
+      <section id="how-it-work"><h1>How it work?</h1></section>
+    </main>
+  </body>
+</html>

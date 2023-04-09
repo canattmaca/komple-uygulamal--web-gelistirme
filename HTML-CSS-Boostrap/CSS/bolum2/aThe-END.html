@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FEATURES</title>
+  </head>
+  <style>
+    * {
+      margin: 0px;
+    }
+    .main-head {
+      background-color: chocolate;
+      padding: 10px 5px;
+    }
+    .main-head-item {
+      display: inline-block;
+    }
+    .main-head-item::before {
+      content: "\25B4";
+    }
+    .main-head-item__item3::before {
+      content: none;
+    }
+    .main-head-item__item3{
+      border: 3px solid white;
+      padding: 6px;
+      border-radius: 8px;
+      background-color: grey;
+      color: white;
+    }
+    .main-head-item__item3:hover {
+      color: grey;
+      background-color: white;
+      border: 3px solid grey;}
+    
+    .main-head-1 {
+      display: inline-block;
+    }
+    .main-head-1 a {
+      color: white;
+      text-decoration: none;
+    }
+    .mh-2 {
+      width: calc(100% - 130px);
+      text-align: right;
+    }
+    .main-head-items a {
+      padding-right: 20px;
+    }
+    .main-head-item a:hover{color: blue;}
+    #item3:hover{color: grey;}
+  </style>
+  <body>
+    <header class="main-head">
+      <div class="main-head-1" mh-1>
+        <a href=""><h2>MovieApp</h2></a>
+      </div>
+      <div class="main-head-1 mh-2">
+        <nav class="main-head-link">
+          <ul class="main-head-items">
+            <li class="main-head-item"><a href="">Filmler</a></li>
+            <li class="main-head-item"><a href="">Diziler</a></li>
+            <li class="main-head-item main-head-item__item3">
+              <a id="item3" href="">Login</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section></section>
+    <section></section>
+  </body>
+</html>

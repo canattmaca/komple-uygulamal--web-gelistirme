@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // function constructor
+      function kisiES5(ad, meslek, dogumyili) {
+        this.ad = ad;
+        this.meslek = meslek;
+        this.dogumyili = dogumyili;
+      }
+
+      kisiES5.prototype.yasHesapla = function () {
+        let tarih = new Date().getFullYear();
+        return tarih - this.dogumyili;
+      };
+      let emre = new kisiES5("emre yağcu", "ogrenci", 2000);
+      console.log(emre.yasHesapla());
+      let adem = new kisiES5("adem", "ogrenci", 1990);
+      let ahmetyilmaz = kisiES5("ahmetyilmaz ", "ogrenci", 1995);
+
+      //class
+
+   
+    </script>
+  </body>
+</html>

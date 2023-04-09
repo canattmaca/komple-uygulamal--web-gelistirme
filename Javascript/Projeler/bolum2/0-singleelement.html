@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="card-header">
+      <h3 id="title" class="card-title h1 h2">To Do App</h3>
+    </div>
+    <ul>
+      <li>Gorev 1</li>
+      <li>Gorev 2</li>
+      <li>Gorev 3</li>
+    </ul>
+    <script>
+      let sonuc
+      sonuc = document.getElementById('title').id
+      sonuc = document.getElementById('title').className
+      sonuc = document.getElementById('title').style.fontSize = '30px'
+      sonuc = document.getElementById('title').style.fontWeight = 'bold'
+      sonuc = document.getElementById('title').style.color = 'red'
+      //   sonuc = document.getElementById('title').style.display = 'none'
+      sonuc = document.querySelectorAll('title')
+      sonuc = document.querySelector('.card-header')
+      sonuc = document.querySelector('li:first-child')
+      //   sonuc = document.querySelector('li:last-child')
+      sonuc = document.querySelector('li:nth-child(3)')
+      sonuc = document.querySelectorAll('li')
+
+      console.log(sonuc)
+    </script>
+  </body>
+</html>

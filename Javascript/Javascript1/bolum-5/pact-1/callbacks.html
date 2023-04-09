@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //login ==> username
+      //post
+      //create.post
+      console.log("start");
+      const login = (username, password, callback) => {
+        setTimeout(() => {
+          callback({ username: username, email: "info@sadikturan.com" });
+        }, 1000);
+      };
+
+      const getPostsByUserName = (username, callback) => {
+        setTimeout(() => {
+          callback(["post1,post2,post3"]);
+        }, 2000);
+      };
+
+      const getPostDetails = (post, callback) => {
+        setTimeout(() => {
+          callback("postdetails");
+        }, 1000);
+      };
+
+      login("sadikturan", "12345", (user) => {
+        console.log(user.username);
+        console.log(user.email);
+        getPostsByUserName(user.username, (posts) => {
+          console.log(posts);
+          getPostDetails(posts[2], (details) => {
+            console.log(details);
+          });
+        });
+      });
+
+      console.log("end");
+    </script>
+  </body>
+</html>

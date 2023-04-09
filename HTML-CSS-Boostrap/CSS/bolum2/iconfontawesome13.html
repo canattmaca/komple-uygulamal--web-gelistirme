@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=7, initial-scale=1.0" />
+    <title>Fontawesome+Uygulama12</title>
+  </head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&family=Roboto:ital,wght@1,700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    * {
+      margin: 0;
+    }
+    body {
+      font-family: "Lato", sans-serif;
+    }
+    .header {
+      background-color: coral;
+      color: #fff;
+      padding: 5px;
+      font-family: "Roboto", sans-serif;
+    }
+    .nav-link-item {
+      display: inline-block;
+    }
+    .header-nav {
+      display: inline-block;
+      width: calc(100% - 125px);
+      text-align: right;
+    }
+    .header a {
+      color: #fff;
+      text-decoration-line: none;
+    }
+    .header-link-1 {
+      font-weight: bold;
+      font-size: 24px;
+    }
+
+    .nav-link-item a {
+      padding-right: 5px;
+      text-decoration-line: none;
+    }
+    .nav-link-item a::before {
+      content: "\2600";
+    }
+
+    .nav-link-item__b1 {
+      border: 2px solid white;
+      background-color: gray;
+      color: #fff;
+      border-radius: 8px;
+      padding: 5px;
+    }
+
+    .nav-link-item__b1 a::before {
+      content: none;
+    }
+    .nav-link-item a:hover {
+      color: gray;
+    }
+    .nav-link-item__b1:hover {
+      background-color: #fff;
+      color: grey;
+      border: 2px solid grey;
+    }
+
+    .s0 {
+      height: 500px;
+      background: url("home-bg.jpeg");
+      background-position: center;
+    }
+    .s2__1 {
+      display: inline-block;
+      width: 30%;
+      padding: 16px;
+      margin: 5px;
+    }
+    .Sayfa-Bilgisi h1 {
+      text-align: center;
+      font-size: 32px;
+      font-weight: 600;
+      color: grey;
+      margin: 0px 0px 20px 0px;
+    }
+    .main-classes {
+      text-align: center;
+    }
+    .s0 h1 {
+      text-align: left;
+      padding: 10px;
+    }
+    .s2__1 i {
+      color: chocolate;
+      font-size: 48px;
+    }
+    .main-classes-1 h1 {
+      margin-top: 20px;
+    }
+  
+  </style>
+  <body>
+    <header class="header">
+      <a class="header-link-1" style="padding-left: 5px" href="">MovieApp</a>
+      <nav class="header-nav">
+        <ul class="nav-link-items">
+          <li class="nav-link-item"><a href="">Filmler</a></li>
+          <li class="nav-link-item"><a href="">Diziler</a></li>
+          <li class="nav-link-item nav-link-item__b1"><a href="">LOGİN</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="Sayfa-Bilgisi">
+      <section class="s0">
+        <h1>Welcome To MovieApp</h1>
+      </section>
+      <main class="main-classes">
+        <section class="main-classes-1">
+          <h1>How it works?</h1>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet
+            placeat illo illum possimus aperiam? Ipsum!
+          </p>
+        </section>
+        <section class="s2">
+          <section class="s2__1">
+            <i class="fa-solid fa-arrow-right"></i>
+            <h1>Register</h1>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet
+              placeat illo illum possimus aperiam? Ipsum!
+            </p>
+          </section>
+          <section class="s2__1">
+            <i class="fa-solid fa-otter"></i>
+            <h1>Choose a Plan</h1>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet
+              placeat illo illum possimus aperiam? Ipsum!
+            </p>
+          </section>
+          <section class="s2__1">
+            <i class="fa-solid fa-face-smile-wink"></i>
+            <h1>Enjoy Movify</h1>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet
+              placeat illo illum possimus aperiam? Ipsum!
+            </p>
+          </section>
+        </section>
+      </main>
+    </main>
+  </body>
+</html>

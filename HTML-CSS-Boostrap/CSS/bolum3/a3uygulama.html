@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>float-egzersize</title>
+  </head>
+
+  <style>
+    * {
+      margin: 5px;
+      box-sizing: border-box;
+    }
+    header,
+    footer {
+      background-color: #8267be;
+      color: #ffbd35;
+      padding: 15px;
+    }
+    .menu {
+      width: 25%;
+      padding: 0;
+      margin: 0;
+      float: left;
+    }
+    .content {
+      width: 74%;
+      float: left;
+    }
+    .clearfix::after{content: "";
+      display: block;
+      clear: both;
+    }
+    .menu-items {
+      padding: 15px 15px 15px 0px;
+      list-style-type: none;
+    }
+    .menu-item {
+      background-color: #502064;
+      margin-bottom: 20px;
+      margin-left: 0;
+      padding: 15px 15px 15px 0px;
+    }
+    .menu-item a {
+      color: white;
+      text-decoration: none;
+    }
+   
+    .content h1 {
+      font-size: 48px;
+      font-weight: 500;
+    }
+    .menu li:hover {
+            cursor: pointer;
+            background-color: #8267BE;
+          }
+  </style>
+  <body>
+    <header>
+      <h2>Header</h2>
+    </header>
+    <main class="clearfix">
+      <section class="menu">
+        <ul class="menu-items">
+          <li class="menu-item"><a href="https://www.google.com/">HTML</a></li>
+
+          <li class="menu-item"><a href="">CSS</a></li>
+
+          <li class="menu-item"><a href="">JavaScript</a></li>
+        </ul>
+      </section>
+
+      <section class="content" style="margin: 0;">
+        <h1>Komple Web Geliştirme Eğitimi</h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum
+          similique, iure officiis quo rem natus. Maxime nam quos temporibus
+          impedit.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+          cumque nulla, magni maxime voluptates dolor velit dicta inventore
+          adipisci eligendi!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+          cumque nulla, magni maxime voluptates dolor velit dicta inventore
+          adipisci eligendi!
+        </p>
+        
+        </p>
+      </section>
+    </main>
+    <footer>
+      <h2>Footer</h2>
+    </footer>
+  </body>
+</html>

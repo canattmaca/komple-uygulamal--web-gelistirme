@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="../uygulama-cs/css/forms.css">
+  </head>
+  <body id="body">
+    <header class="main-header">
+      <div class="container">
+        <a href="#" class="main-header__logo">MovieApp</a>
+        <nav class="main-nav">
+          <ul class="main-nav__items">
+            <li class="main-nav__item">
+              <a href="#">Filmler</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#">Diziler</a>
+            </li>
+            <li class="main-nav__item main-nav__item--login">
+              <a class="btn btn-secondary" href="#">Login</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="signup-Page">
+      <h1 class="signup-title">Create Your Account</h1>
+      <form action="" class="signup-form">
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname" />
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname" />
+        <label for="email">Enter your email:</label>
+        <input type="email" id="email" name="email" />
+        <label for="pwd">Password:</label>
+        <input type="password" id="pwd" name="pwd" />
+
+        <label for="Gender">Gender</label>
+        <select name="" id="gender">
+          <option value="">Select</option>
+          <option value="">Male</option>
+          <option value="">Famale</option>
+        </select>
+
+        <input type="checkbox" id="agree" name="agree" value="Bike" />
+        <label for="agree"> Agree to <a href="">Terms &emsp;; Contions</a> </label>
+
+        <button type="submit" class="btn btn-primary">Sign-UP</button>
+      </form>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-2">
+            <ul>
+              <li><a href="">About</a></li>
+              <li><a href="">Blog</a></li>
+              <li><a href="">From</a></li>
+              <li><a href="">Content</a></li>
+            </ul>
+          </div>
+          <div class="col-2 icon-list">
+            <ul id="social-links">
+              <li>
+                <a class="fa facebook" href=""
+                  ><i class="fa-brands fa-facebook-f"></i
+                ></a>
+              </li>
+              <li>
+                <a class="fa twitter" href=""
+                  ><i class="fa-brands fa-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a class="fa instagram" href=""
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <a href="#body" id="backtotop">
+      <i class="fas fa-chevron-circle-up"></i>
+    </a>
+  </body>
+</html>

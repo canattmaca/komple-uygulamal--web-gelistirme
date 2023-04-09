@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="card-header">
+      <h3 class="card-title h1" id="title">to do App 2</h3>
+    </div>
+    <ul id="task-list1">
+      <li class="task">gorev1</li>
+      <li class="task">gorev2</li>
+      <li class="task">gorev3</li>
+    </ul>
+    <ul id="task-list2">
+      <li class="task">gorev1</li>
+      <li class="task">gorev2</li>
+      <li class="task">gorev3</li>
+    </ul>
+    <script>
+      let sonuc;
+
+      sonuc = document.getElementsByClassName("task")[1];
+      sonuc = document.getElementsByClassName("task")[3];
+    
+      // ul=document.getElementById("task-list2")
+      
+      // sonuc = ul.getElementsByTagName("li")
+      sonuc=document.querySelectorAll("#task-list1 li")
+      for (let i of sonuc) {
+        i.style.color = "red";
+      }
+      console.log(sonuc);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title></head
+  ><style>
+    .conteiner{
+      display: grid;
+      grid-template-columns:repeat(3,1fr);
+      grid-template-rows: 1fr 5fr 1fr;
+    }
+    .header{grid-column: 1/span 3;text-align: center;background-color: red;}
+    .content{grid-column: 1/span 2; background-color: aqua ;}
+    footer{grid-column: 1/span 3; text-align: center;background-color: violet;}
+  </style>
+  <body>
+    <div class="conteiner">
+      <header class="header">
+        <h2>page header</h2>
+      </header>
+      <section class="content">
+        <h3>Lorem, ipsum dolor.</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam qui
+          ea rem cupiditate maiores tempore culpa fugit debitis dolor sint,
+          impedit molestiae non quisquam, soluta facilis minima consectetur
+          accusantium dolorem! Molestias unde ducimus omnis quo. Maxime
+          assumenda suscipit similique iusto? Ullam laboriosam amet magni
+          inventore, quos voluptatibus! Magnam nisi qui, soluta, totam ipsam
+          minus voluptatum facere impedit officia deleniti eos!
+        </p>
+      </section>
+      <section class="sidebar">
+        <h2>Lorem, ipsum.</h2>
+        <ul>
+          <li>Lorem, ipsum.</li>
+          <li>Lorem, ipsum.</li>
+          <li>Lorem, ipsum.</li>
+          <li>Lorem, ipsum.</li>
+        </ul>
+      </section>
+      <footer>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </footer>
+    </div>
+  </body>
+</html>

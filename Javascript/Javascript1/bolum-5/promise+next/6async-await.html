@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //login ==> username
+      //post
+      //create.post
+      console.log("start");
+      serverStatus = true;
+
+      const login = (username, password) => {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            if (serverStatus) {
+              resolve({ username: username, email: "info@sadikturan.com" });
+            } else {
+              reject("server is offline");
+            }
+          }, 1000);
+        });
+      };
+
+      const getPostsByUserName = (username, callback) => {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve(["post1,post2,post3"]);
+          }, 2000);
+        });
+      };
+
+      const getPostDetails = (post, callback) => {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve("postdetails");
+          }, 1000);
+        });
+      };
+
+      // login("sadikturan", "12345", (user) => {
+      //   console.log(user.username);
+      //   console.log(user.email);
+      //   getPostsByUserName(user.username, (posts) => {
+      //     console.log(posts);
+      //     getPostDetails(posts[2], (details) => {
+      //       console.log(details);
+      //     });
+      //   });
+      // });
+      login("sadikturan", "12345")
+        .then((user) => {
+          console.log(user);
+          return getPostsByUserName(user.username);
+        })
+        .then((posts) => {
+          console.log(posts);
+          return getPostDetails(posts[0]);
+        })
+        .then((details) => {
+          console.log(details);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+      console.log("end");
+
+      //sync
+      async function displayUser() {
+        try {
+          const user = await login("sadikturan", "1234123");
+          console.log(user);
+          const posts = await getPostsByUserName(user.username);
+          console.log(posts);
+          const details = await getPostDetails(posts[0]);
+          console.log(details);
+        } catch (err) {
+          console.log(err);
+        }
+      }
+
+      displayUser();
+    </script>
+  </body>
+</html>

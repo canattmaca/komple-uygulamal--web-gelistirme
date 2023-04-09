@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        background-color: #555;
+      
+      }
+      .box-1 {
+        background-color: yellow;
+        width: 150px;
+        height: 100px;
+       /* animation-name: a1;
+       animation-duration: 2s;
+       /* animation-iteration-count: infinite; */
+       /* animation-fill-mode: forwards;
+       animation-delay: 2s;
+       animation-direction:alternate;
+       animation-timing-function: ease-in; */
+        animation: a1 5s forwards 2s ease-in;      
+      } 
+
+      @keyframes a1{
+        to {
+          width: 500px;
+   
+        }
+      }
+ 
+    </style>
+  </head>
+  <body>
+    <div class="box-1"></div>
+  </body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .head {
+      background-color: orange;
+    }
+
+    .head-title {
+      padding: 30px;
+      text-align: center;
+      color: white;
+    }
+    .head-title h2 {
+      margin-bottom: 10px;
+    }
+
+    .navbar {
+      background-color: black;
+      display: flex;
+    }
+    .navbar a {
+      padding: 10px 20px;
+      text-decoration: none;
+      color: white;
+      transition: all 0.3s;
+    }
+    .navbar a:hover {
+      background-color: rgb(0, 38, 77);
+      opacity: 0.5;
+    }
+
+    .ph {
+      background-color: grey;
+      height: 50px;
+      margin: 10px;
+    }
+
+    #main {
+      display: flex;
+    }
+
+    .side-bar {
+      order: 1;
+      flex: 25%;
+      background-color: gainsboro;
+    }
+    .content {
+      flex: 75%;
+    }
+
+    .box h2,
+    p {
+      padding: 16px;
+    }
+
+    @media (max-width: 700px) {
+      .navbar, #main
+      {flex-direction: column;}
+
+      .navbar a{align-self: center;}
+
+      .side-bar {
+      order: -11;
+  
+    }
+    }
+  </style>
+  <body>
+    <section class="head">
+      <div class="head-title">
+        <h2>Lorem, ipsum.</h2>
+
+        <h3>Lorem, ipsum dolor.</h3>
+      </div>
+      <div class="navbar">
+        <a href="">Link1</a>
+        <a href="">Link2</a>
+        <a href="">Link3</a>
+        <a href="">Link4</a>
+      </div>
+    </section>
+    <section id="main">
+      <div class="side-bar">
+        <div class="box">
+          <h2>Lorem, ipsum dolor.</h2>
+          <div class="ph" style="height: 200px"></div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum fuga
+            possimus voluptatem dolores eos. Corporis ullam maxime, voluptatem
+            veritatis inventore nobis facilis laborum quibusdam repellat alias
+            minima voluptatibus distinctio sint.
+          </p>
+
+          <div class="ph"></div>
+          <div class="ph"></div>
+          <div class="ph"></div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="box">
+          <h2>Lorem, ipsum dolor.</h2>
+          <div class="ph" style="height: 200px"></div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum fuga
+            possimus voluptatem dolores eos. Corporis ullam maxime, voluptatem
+            veritatis inventore nobis facilis laborum quibusdam repellat alias
+            minima voluptatibus distinctio sint.
+          </p>
+        </div>
+        <div class="box">
+          <h2>Lorem, ipsum dolor.</h2>
+          <div class="ph" style="height: 200px"></div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum fuga
+            possimus voluptatem dolores eos. Corporis ullam maxime, voluptatem
+            veritatis inventore nobis facilis laborum quibusdam repellat alias
+            minima voluptatibus distinctio sint.
+          </p>
+        </div>
+        <div class="box">
+          <h2>Lorem, ipsum dolor.</h2>
+          <div class="ph" style="height: 200px"></div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum fuga
+            possimus voluptatem dolores eos. Corporis ullam maxime, voluptatem
+            veritatis inventore nobis facilis laborum quibusdam repellat alias
+            minima voluptatibus distinctio sint.
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

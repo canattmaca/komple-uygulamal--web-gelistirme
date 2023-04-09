@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>a4mediaqueris</title>
+    <style>
+      body {
+        background-color: beige;
+      }
+
+      h1 {
+        display: none;
+        font-size: 48px;
+        font-weight: bolder;
+      }
+
+      /* phone */
+
+      @media (max-width: 575px)   {
+        body {
+          background-color: blue;
+        }
+
+        .phone{
+          display: block;
+        }
+      }
+
+      /* landscape */
+
+      @media (min-width: 576px) and (max-width: 767px)   {
+        body {
+          background-color: green;
+        }
+
+        .landscape{
+          display: block;
+        }
+      }
+
+      /* tablets */
+
+      @media (min-width: 768px)   and (max-width: 991px) {
+        body {
+          background-color: red;
+        }
+        .tablets  {
+          display: block;
+        }
+      }
+
+      /* desktop */
+
+      @media (min-width: 992px) and (max-width: 1199px)  {
+        body {
+          background-color: yellow;
+        }
+        .desktop  {
+          display: block;
+        }
+      }
+
+      /* large */
+
+      @media (min-width: 1200px) and (max-width: 1365px)  {
+        body {
+          background-color: orange;
+        }
+        .large  {
+          display: block;
+        }
+      }
+
+      /* xlarge */
+      @media (min-width: 1366px)  {
+        body {
+          background-color: black;
+        }
+        .xlarge {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="phone">phone</h1>
+    <h1 class="landscape">landscape</h1>
+    <h1 class="tablets">tablets</h1>
+    <h1 class="desktop">desktop</h1>
+    <h1 class="large">large</h1>
+    <h1 class="xlarge">xlarge</h1>
+  </body>
+</html>

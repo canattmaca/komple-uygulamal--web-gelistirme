@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css
+    "
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+  .dropdown-toggle::after{
+    display: none;
+  }
+  .task{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .task label.checked{
+    text-decoration: line-through !important
+  }
+</style>
+  </head>
+  <body>
+    <div class="container">
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                To Do App
+            </div>
+            <div class="card-body">
+                <form >
+                        <div class="input-group">
+                        <input type="text" id="txtTaskName" class="form-control">
+                        <button class="btn btn-primary" id="btnAddNewTask" type="submit">Ekle</button> 
+                        </div>
+                    
+                </form>
+            </div>
+        </div>
+        <div class="card mt-3">
+            <div class="card-header">
+                <button class="btn btn-danger btn-sm float-end" id="btnClear">Temizle</button>
+            </div>
+            <ul id="task-list" class="list-group list-group-flush">
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js
+"></script>
+<script>
+ 
+  'use strict'
+ 
+
+  let taskList=[
+    {'id':1,'taskName':'Task 1','situation':'Completed'},
+    {'id':2,'taskName':'Task 2','situation':'Completed'},
+    {'id':3,'taskName':'Task 3','situation':'Completed'},
+    {'id':4,'taskName':'Task 4','situation':'Pending'}
+  ]
+  let editId
+  let isEditTask=false
+  const taskInput=document.querySelector('#txtTaskName')
+  
+  displayTasks()
+  
+  function displayTasks(){
+    let ul=document.getElementById('task-list')
+    ul.innerHTML=''
+    //display taskı çapırdığımız zaman 0 dan yazdırır yani hepsini birden eklemez.İlk çağırdığında 4 e kadar gitti ama bir dahakinde düşündüğümüz zaman görev listesini bir daha almaması için ul.innerhtml sıfırlarız. Böylece geriye sadece yazdığımız görev kalır
+    if(taskList.length===0){
+      ul.innerHTML='<p class="p-3 m-0" >Görev Listeniz Boş</p>'
+    }
+        for(let index of taskList){
+          let completed= index.situation== 'Completed'? 'checked' : ''  
+          let li= `
+                <li class="task list-group-item">
+                                <div class="form-check">
+                                  <input type="checkbox" onclick='updateStatus(this)' id="${index.id}" class="form-check-input" ${completed} >
+                                  <label for="${index.id}" class="form-check-label ${completed}" >${index.taskName}</label>
+                                </div>
+                                <div class="dropdown">
+                                  <button class="btn btn-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                  </button>
+                                  <ul class="dropdown-menu">
+                                    <li><a onclick='deleteTask(${index.id})' class="dropdown-item" href="#"><i class="fa-solid fa-trash"></i> Delete</a></li>
+                                    <li><a onclick='updateTask(${index.id},"${index.taskName}")' class="dropdown-item" href="#"><i class="fa-solid fa-pen-to-square"></i> Edit</a></li>
+                              
+                                  </ul>
+                                </div>
+                </li> 
+                `
+            ul.insertAdjacentHTML('beforeEnd',li)
+ }
+  }
+  
+let btnAdd=document.querySelector('#btnAddNewTask')
+// btnAdd.addEventListener('click',function(e){
+//     e.preventDefault()
+//     console.log('click');
+// })
+btnAdd.addEventListener('click',newTask)
+btnAdd.addEventListener('keypress',function(){
+  if(event.key=='Enter'){
+    document.getElementById('#btnAddNewTask').click()
+  }
+})
+
+function newTask(e){
+   
+   if(taskInput.value==''){
+    alert('write a TaskName')
+   }
+   else{ 
+  if(!isEditTask){
+    //ekleme 
+    taskList.push({'id':taskList.length+1,'taskName':taskInput.value})
+  }
+  else{
+    //güncelleme
+    for(let task of taskList){
+      if(task.id===editId){task.taskName=taskInput.value}
+      isEditTask=false
+    }
+
+  }
+  
+   taskInput.value=''
+   displayTasks()  
+  }
+   e.preventDefault()
+} 
+ 
+function deleteTask(id){
+  let deletedId
+  // for(let task of taskList){
+  //   if(task.id===id)
+  //   {deletedId===id}
+  // }
+  //  deletedId= taskList.findIndex(function(task){
+  //     return task.id==id
+  //   })
+  deletedId=taskList.findIndex(task=>task.id==id)
+  taskList.splice(deletedId,1)
+  displayTasks()
+}
+
+function updateTask(taskId,taskName){
+  editId=taskId
+  isEditTask=true 
+  taskInput.value=taskName
+  taskInput.focus()
+  taskInput.classList.add('active')
+  console.log('edit id:',editId)
+  console.log('edit name:',isEditTask)
+
+}
+ 
+const btnClear=document.querySelector('#btnClear')
+btnClear.addEventListener('click',function(){
+ taskList.splice(0,taskList.length)
+ displayTasks()
+})
+
+function updateStatus(selectedTask){
+  let label=selectedTask.nextElementSibling
+  let situation
+
+  if (selectedTask.checked){
+    label.classList.add('checked')
+    situation='Complated'
+  }
+  else{
+    label.classList.remove('checked')
+    situation='Pending'
+  }
+  for(let task of taskList){
+    if(task.taskId==selectedTask.id){
+      task.situation=situation
+    }
+  }
+  console.log(taskList);
+}
+</script>
+   
+  </body>
+</html>

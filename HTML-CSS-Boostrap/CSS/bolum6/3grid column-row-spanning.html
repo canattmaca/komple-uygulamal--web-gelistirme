@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid</title>
+  </head>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+    }
+
+    .conteiner {
+      background-color: orange;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      /* gap: 10px; */
+      row-gap: 10px;
+      column-gap: 10px;
+    }
+
+    .item {
+      background-color: blueviolet;
+      color: 20px;
+      padding: 20px;
+    }
+    .item:first-child {
+      /* grid-column-start: 2;
+      grid-column-end: 5;
+      grid-row-start: 2;
+      grid-row-end: 3; */
+      /* grid-column: 2/ span 3; 2 den başla 3 tane alan kapla demek */
+            /* grid-column: 2/ span 3;
+            /* grid-row: 1/3; */
+            /* grid-row: 2/span 2; */ 
+            grid-area: 1/2/ span 3/span 4;
+            /* sutun satır */
+    }
+
+    
+  </style>
+  <body>
+    <div class="conteiner">
+      <div class="item item1">item1</div>
+      <div class="item item2">item2</div>
+      <div class="item item3">item3</div>
+      <div class="item item4">item4</div>
+      <div class="item item3">item3</div>
+      <div class="item item4">item4</div>
+      <div class="item item3">item3</div>
+      <div class="item item4">item4</div>
+      <div class="item item3">item3</div>
+      <div class="item item4">item4</div>
+      <div class="item item3">item3</div>
+      <div class="item item4">item4</div>
+      <div class="item item3">item3</div>
+      <div class="item item4">item4</div>
+    </div>
+  </body>
+</html>

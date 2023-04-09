@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // ES5'e göre tek sayi hesaplama
+      let sayilar = [1, 2, 3, 5, 11, 13, 44, 65];
+      // const tekSayilar=[];
+      // for(let sayi of sayilar){
+      //   if(sayi%2===1){
+      //     tekSayilar.push(sayi)
+      //   }
+      // }
+
+      //ES6'ya göre tek sayi hesaplama
+      //// filter içinde tekrar parentez açmama gerek yok map ise true false değer döndürür
+      const tekSayiKontrolEt = (sayi) => sayi % 2 === 1;
+      // const tekSayilar=sayilar.filter(tekSayiKontrolEt);
+      const tekSayilar = sayilar.map(tekSayiKontrolEt);
+      console.log(tekSayilar);
+
+      const urunler = [
+        { urunAdi: "İphone 10", urunFiyat: 10000 },
+        { urunAdi: "İphone 11", urunFiyat: 15000 },
+        { urunAdi: "İphone 12", urunFiyat: 18000 },
+        { urunAdi: "İphone 13", urunFiyat: 25000 },
+      ];
+
+      // const sonuc= urunler.map(urun=>urun.urunAdi);
+      // const filtrelenenurunler= urunler.filter(urun=>urun.urunFiyat>15000).map(urun=>urun.urunAdi)
+      // sonuc = urunler.find((urun) => urun.urunFiyat > 12000);
+      sonuc = urunler.findIndex((urun) => urun.urunFiyat > 12000);
+      console.log(sonuc);
+    </script>
+  </body>
+</html>

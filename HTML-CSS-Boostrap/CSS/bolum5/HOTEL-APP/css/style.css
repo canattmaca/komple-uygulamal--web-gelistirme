@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,300&display=swap");
+
+* {
+  margin: 0;
+  bottom: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+h1,
+h2 {
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+img {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--dark);
+  opacity: 0.8;
+  color: var(--white);
+  height: 70px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  padding: 0 3rem;
+}
+
+.navbar a {
+  padding: 1rem 2rem;
+  margin: 0 0.5rem;
+  color: #fff;
+}
+
+.navbar a:hover {
+  border-bottom: 2px solid var(--warning);
+}
+.navbar ul {
+  display: flex;
+}
+
+.navbar .brand {
+  font-weight: 400;
+}
+.navbar h1 {
+  font-size: 3rem;
+}
+
+/* header */
+
+.main-header {
+  height: 100vh;
+  background-image: url("../img/bg-1.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
+  position: relative;
+}
+
+.main-header.blog {
+  background-image: url(../img/bg-2.jpeg);
+  height: 50vh;
+
+}
+
+.main-header .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  height: 100%;
+}
+
+.main-header::before {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: " ";
+}
+.main-header * {
+  z-index: 5;
+}
+.main-header .content h1 {
+  font-size: 5.5rem;
+}
+.main-header .content p {
+  font-size: 2.3rem;
+  max-width: 60rem;
+  margin: 2rem 0.3rem;
+}
+
+/* icons */
+
+.icons {
+  padding: 3rem;
+}
+.icons h3 {
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+.icons i {
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 1rem;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+}
+
+/* about */
+#about {
+  color: var(--white);
+}
+
+#about h2 {
+  font-size: 4rem;
+  font-weight: 400;
+}
+#about p {
+  margin: 2rem 0;
+}
+
+#about-2-row {
+  flex-direction: row-reverse;
+}
+
+/* gallery */
+
+#galery img:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+/* cards */
+.card {
+  color: #fff;
+  font-weight: 700;
+}
+.card-body {
+  padding: 2rem;
+  margin-top: -1rem;
+}
+
+.teams img {
+  border-radius: 50%;
+}
+.teams img:hover {
+  opacity: 0.7;
+}
+
+/* contant-form */
+
+.contant-form {
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.contant-form label {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+.content button {
+  margin-top: 2rem;
+}
+
+.contant-form .form-control {
+  margin-bottom: 1.5rem;
+}
+
+.contant-form .form-control input {
+  height: 40px;
+  padding: 0.5rem;
+  width: 100%;
+  border: 2 px solid var(--white);
+  border-radius: 2px;
+}
+
+.content h2 {
+  font-size: 4rem;
+}
+
+/* footer */
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: items;
+  text-align: center;
+  height: 200px;
+}
+
+.footer a {
+  color: var(--danger);
+  margin-right: 1rem;
+}
+
+.footer a:hover {
+  opacity: 0.6;
+}
+
+
+/* article */
+.articles{padding: 3rem 5rem;
+}
+
+.article{margin-top: 2rem;
+color: #fff;}
+
+
+/* MOBİLE */
+
+@media (max-width: 768px) {
+  html {
+    font-size: 9px;
+  }
+
+  .main-header .navbar {
+    flex-direction: column;
+    height: 120px;
+    padding: 20px;
+  }
+  .main-header .navbar .a {
+    padding: 10px;
+    margin: 0 3px;
+  }
+}

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>a10-box-shadow</title>
+  </head>
+  <link rel="stylesheet" href="headerstyle.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital@1&family=Roboto:ital@1&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="helperclasses.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Lato", sans-serif;
+    }
+    .s0 {
+      height: 500px;
+      background: url("home-bg.jpeg");
+      background-position: center;
+      background-size: cover;
+      position: relative;
+    }
+    .s0 h1 {
+      text-align: left;
+      padding: 10px 10px;
+      margin-top: 0;
+      color: white;
+      font-size: 44px;
+      font-weight: bold;
+      position:absolute;
+      top: 55%;
+      left: 50%;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      transform: translate(-50%,-50%);
+      
+    
+    }
+    .s1 {
+      text-align: center;
+    }
+    .s1 h2 {
+      padding: 20px;
+      font-size: 32px;
+    }
+    .s1__1-2 {
+      width: 30%;
+      display: inline-block;
+    }
+
+    .s1__1-1 {
+      margin-bottom: 20px;
+      padding: 20px;
+    }
+    .s1__1-2 {
+      margin-bottom: 40px;
+      padding: 10px;
+    }
+    .s1 i {
+      font-size: 48px;
+      color: #ff7000;
+    }
+
+    .features {
+      margin: 0;
+      padding-bottom: 40px;
+    }
+    .features-1 {
+      display: inline-block;
+    }
+    .left {
+      width: 50%;
+      height: 350px;
+      background: url("features.jpeg");
+      background-size: cover;
+      background-position: top center;
+    }
+
+    .right {
+      width: 49%;
+      height: 350px;
+      vertical-align: top;
+      padding: 50px 20px 20px 20px;
+      background-color: #edf5f7;
+    }
+    .right h1 {
+      font-family: "Roboto", sans-serif;
+    }
+
+    .right p {
+      margin-top: 20px;
+      font-family: "Roboto", sans-serif;
+    }
+
+    .selectplan {
+      width: 1000px;
+      text-align: center;
+      margin: auto;
+      position: relative;
+    }
+
+    .inner-plan {
+      float: left;
+      width: 30%;
+      background-color: #edf5f7;
+      margin: 10px;
+      box-sizing: border-box;
+      padding: 30px;
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+      transition: box-shadow 0.2s;
+    }
+    .inner-plan:hover{ box-shadow: rgba(0, 0, 0, 0.7) 0px 19px 38px, rgba(0, 0, 0, 0.5) 0px 15px 12px;}
+    .inner-plan h2 {
+      padding: 10px;
+    }
+    .inner-plan h3 {
+      padding: 10px;
+    }
+    .inner-plan button {
+      margin: 10px;
+      padding: 3px;
+    }
+
+    .inner-plan-list ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    .inner-plan-list ul li {
+      padding-bottom: 4px;
+    }
+    .onerilen{border: 4px solid white;
+      padding: 5px;
+      border-radius: 8px;
+      background-color: white;
+      color: #fc997c;}
+    .recom{background-color: #4d4ae1;
+           margin-bottom: 50px;
+          position: relative;
+        top: -20px;}
+    .btn-padding{margin-top: 18px;}
+    .planning-bottom{padding-bottom: 50px;}
+    .selectplanh1{margin-bottom: 20px;}
+  </style>
+  <body>
+    <header class="main-head">
+      <div class="main-head-nav"><h2>MovieApp</h2></div>
+      <nav class="main-head-nav yatay">
+        <ul class="main-head-nav-items">
+          <li class="main-head-nav-item"><a href="">Filmler</a></li>
+
+          <li class="main-head-nav-item"><a href="">Diziler</a></li>
+
+          <li class="main-head-nav-item main-head-nav-item__item3">
+            <a class="btn secondary"  href="" style="font-size: 16px;">Login</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="ana-govde">
+      <section class="s0"><h1>Welcome to MovieApp</h1></section>
+      <main class="s1">
+        <section class="s1__1-1">
+          <h2>How it works?</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
+            corrupti libero neque placeat facilis nobis.
+          </p>
+        </section>
+
+        <section class="s1__1-2" id="row1">
+          <i class="fa-solid fa-right-to-bracket"></i>
+          <h2>Register</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
+            corrupti libero neque placeat facilis nobis.
+          </p>
+        </section>
+        <section class="s1__1-2" id="row2">
+          <i class="fa-brands fa-buffer"></i>
+          <h2>Choose a Plan</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
+            corrupti libero neque placeat facilis nobis.
+          </p>
+        </section>
+        <section class="s1__1-2" id="row3">
+          <i class="fa-solid fa-face-smile-wink"></i>
+          <h2>Enjoy Movies</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
+            corrupti libero neque placeat facilis nobis.
+          </p>
+        </section>
+      </main>
+    </main>
+    <main class="features">
+      <div class="features-1 left"></div>
+      <div class="features-1 right">
+        <h1 style="font-weight: 600">
+          Watch all Movies & TV Shows once they get released!
+        </h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt,
+          odit esse adipisci omnis itaque provident eligendi nobis excepturi
+          distinctio minima expedita. Culpa, explicabo praesentium rem
+          recusandae iusto fugiat voluptatibus consectetur.
+        </p>
+        <br>
+        <div class="btn-padding">
+          <a class="btn secondary"  href="">View Features</a>
+        </div>
+      </div>
+    </main>
+    <main  class="selectplan">
+      <h2 class="selectplanh1">Become a Premium Member</h2>
+      <br /><br />
+      <div class="inner-plan">
+        <h2>Free</h2>
+        <h3>0/month</h3>
+        <div class="inner-plan-list">
+          <ul>
+            <li>HD available</li>
+            <li>Unlimited Movies and TV shows</li>
+            <li>Watch on your phone & tablet</li>
+            <li>Download and watch offline</li>
+            <li>Screens you can watch</li>
+            <li>First Month Free</li>
+          </ul>
+        </div>
+        <div class="btn-padding">
+          <a class="btn primary"  href="">Choose a Plan</a>
+         </div>
+      </div>
+      <div class="inner-plan recom">
+        <h2 class="onerilen">Recommended</h2>
+        <h2>Basic</h2>
+        <h3>$9.99/month</h3>
+        <div class="inner-plan-list">
+          <ul>
+            <li>HD available</li>
+            <li>Unlimited Movies and TV shows</li>
+            <li>Watch on your phone & tablet</li>
+            <li>Download and watch offline</li>
+            <li>Screens you can watch</li>
+            <li>First Month Free</li>
+          </ul>
+        </div>
+        <div class="btn-padding">
+          <a class="btn primary"  href="">Choose a Plan</a>
+         </div>
+      </div>
+      <div class="inner-plan">
+        <h2>Premium</h2>
+        <h3>$19.99/month</h3>
+        <div class="inner-plan-list">
+          <ul>
+            <li>HD available</li>
+            <li>Unlimited Movies and TV shows</li>
+            <li>Watch on your phone & tablet</li>
+            <li>Download and watch offline</li>
+            <li>Screens you can watch</li>
+            <li>First Month Free</li>
+          </ul>
+        </div>
+        <div class="btn-padding">
+         <a class="btn primary"  href="">Choose a Plan</a>
+        </div>
+      </div>
+    </main>
+ 
+  </body>
+</html>

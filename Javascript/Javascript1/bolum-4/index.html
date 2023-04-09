@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   // function selam(){
+      //   //     console.log("merhaba");
+      //   // }
+      //   //  JAVASCRİPT ES5
+      //   var selam = function () {
+      //     console.log("Merhaba");
+      //   };
+      //   selam();
+      //   //  JAVASCRİPT ES6 -arrow function
+
+      const selamlamaES6 = (isim) => console.log("Merhaba " + isim);
+      selamlamaES6("ahmet");
+
+      //   ES5
+      var toplamES5 = function (a, b) {
+        return a + b;
+      };
+      var sonuc = toplamES5(10, 20);
+      console.log(sonuc);
+
+      // ES&
+    //   parantez kapıyorsan return yazman gerekiyor
+      const toplamES6 = (a, b) => a + b;
+      console.log(toplamES6(20,50))
+    </script>
+  </body>
+</html>
